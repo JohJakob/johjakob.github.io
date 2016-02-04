@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="240px" height="144px" viewBox="0 0 240 144" enable-background="new 0 0 240 144" xml:space="preserve">
+<g id="Hand">
+	<rect x="100" y="93" fill="#333333" width="8" height="16"/>
+	<rect x="108" y="85" fill="#333333" width="16" height="8"/>
+	<polygon fill="#333333" points="140,109 132,109 132,101 124,101 124,93 132,93 132,85 140,85 	"/>
+	<rect x="108" y="109" fill="#333333" width="8" height="16"/>
+	<rect x="116" y="125" fill="#333333" width="8" height="8"/>
+	<rect x="124" y="133" fill="#333333" width="8" height="8"/>
+	<rect x="132" y="141" fill="#333333" width="8" height="8"/>
+	<polygon fill="#333333" points="172,165 140,165 140,149 148,149 148,149 148,157 172,157 	"/>
+	<rect x="172" y="149" fill="#333333" width="16" height="8"/>
+	<polygon fill="#333333" points="204,165 188,165 188,157 196,157 196,141 204,141 	"/>
+	<rect x="204" y="133" fill="#333333" width="8" height="8"/>
+	<polygon fill="#333333" points="220,133 212,133 212,85 204,85 204,93 196,93 196,77 220,77 	"/>
+	<polygon fill="#333333" points="196,77 180,77 180,93 172,93 172,77 156,77 156,93 148,93 148,53 156,53 156,69 196,69 	"/>
+	<polygon fill="#333333" points="148,53 140,53 140,45 132,45 132,85 124,85 124,37 148,37 	"/>
+	<rect x="188" y="109" fill="#333333" width="8" height="32"/>
+	<rect x="172" y="109" fill="#333333" width="8" height="32"/>
+	<rect x="156" y="109" fill="#333333" width="8" height="32"/>
+</g>
+</svg>
