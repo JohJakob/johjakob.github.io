@@ -1,6 +1,5 @@
 /* Made with <3 in Germany */
 
-$black: #1d1d1b;
 $gray: #aaa;
 $darkGray: #888;
 
@@ -24,7 +23,7 @@ $shadow: 0 4px 10px rgba(29, 29, 27, 0.25);
 body {
   margin: 4%;
   padding: 0;
-  color: $black;
+  color: #000;
   font-family: $font;
   font-size: $text;
   text-align: center;
@@ -57,6 +56,14 @@ h2 {
 }
 
 header {
+  p {
+    margin: 0;
+    color: $gray;
+    font-size: $largeText;
+    font-weight: 300;
+    cursor: default;
+  }
+
   .ripples {
     height: 120px;
   }
@@ -102,14 +109,6 @@ header {
     height: 50%;
     @include gradient(#ffdb4c, #ffcd02);
   }
-
-  p {
-    margin: 0;
-    color: $gray;
-    font-size: $largeText;
-    font-weight: 300;
-    cursor: default;
-  }
 }
 
 section {
@@ -119,6 +118,15 @@ section {
 
 footer {
   margin-top: 100px;
+
+  p {
+    color: $gray;
+    font-size: $smallText;
+
+    a:hover {
+      color: $darkGray;
+    }
+  }
 }
 
 .atvImg {
@@ -144,15 +152,6 @@ footer {
 
 .instagram:hover path {
   fill: #125688;
-}
-
-.copyright {
-  color: $gray;
-  font-size: $smallText;
-
-  a:hover {
-    color: $darkGray;
-  }
 }
 
 .imprint {
