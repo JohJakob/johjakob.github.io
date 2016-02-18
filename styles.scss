@@ -57,58 +57,21 @@ h2 {
 }
 
 header {
+  img {
+    width: 120px;
+    transition: transform .25s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
   p {
     margin: 0;
     color: $gray;
     font-size: $largeText;
     font-weight: 300;
     cursor: default;
-  }
-
-  .ripples {
-    height: 120px;
-  }
-
-  .ripple {
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    border-radius: 100%;
-    box-shadow: $shadow;
-    transform: translate(-50%, -50%);
-    transition: transform .25s ease;
-
-    &:hover {
-      transform: translate(-50%, -50%) scale(1.05);
-    }
-  }
-
-  .outer {
-    left: 50%;
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    @include gradient(#ff5e3a, #ff2a68);
-    border-radius: 100%;
-    box-shadow: $shadow;
-    transform: translate(-50%);
-    transition: transform .25s ease;
-
-    &:hover {
-      transform: translate(-50%) scale(1.05);
-    }
-  }
-
-  .middle {
-    width: 70%;
-    height: 70%;
-    @include gradient(#ff9500, #ff5e3a);
-  }
-
-  .inner {
-    width: 50%;
-    height: 50%;
-    @include gradient(#ffdb4c, #ffcd02);
   }
 }
 
