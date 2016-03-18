@@ -11,7 +11,7 @@ $text: 16pt;
 $largeText: 21pt;
 $hugeText: 37pt;
 
-$shadow: 0 4px 10px rgba(29, 29, 27, 0.25);
+$shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 
 @mixin gradient($firstGradientColor, $secondGradientColor) {
   background: linear-gradient(top, $firstGradientColor, $secondGradientColor);
