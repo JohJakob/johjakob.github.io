@@ -1,8 +1,6 @@
 /* Made with <3 in Germany */
 
 $gray: #aaa;
-$darkGray: #888;
-$lightGray: #ccc;
 
 $font: -apple-system, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $tinyText: 9pt;
@@ -11,118 +9,28 @@ $text: 16pt;
 $largeText: 21pt;
 $hugeText: 37pt;
 
-$shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-
-@mixin gradient($firstGradientColor, $secondGradientColor) {
-  background: linear-gradient(top, $firstGradientColor, $secondGradientColor);
-  background: -webkit-linear-gradient(top, $firstGradientColor, $secondGradientColor);
-  background: -moz-linear-gradient(top, $firstGradientColor, $secondGradientColor);
-  background: -ms-linear-gradient(top, $firstGradientColor, $secondGradientColor);
-  background: -o-linear-gradient(top, $firstGradientColor, $secondGradientColor);
-}
-
 body {
-  margin: 4%;
+  margin: 0;
   padding: 0;
-  color: #000;
+  color: #fff;
   font-family: $font;
   font-size: $text;
   text-align: center;
-  background: #fff;
+  background: #000;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h1 {
-  margin-bottom: 20px;
-  font-size: $hugeText;
-  font-weight: 300;
+  font-size: 10vw;
   cursor: default;
-}
-
-h2 {
-  margin-bottom: 20px;
-  color: $darkGray;
-  font-size: $largeText;
-  font-weight: 400;
-  text-align: left;
-  cursor: default;
-}
-
-header {
-  img {
-    width: 120px;
-    transition: transform .25s ease;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-
-  p {
-    margin: 0;
-    color: $gray;
-    font-size: $largeText;
-    font-weight: 300;
-    cursor: default;
-  }
-}
-
-section {
-  margin: 40px 6% 40px 6%;
-  clear: both;
-}
-
-footer {
-  margin-top: 100px;
-
-  p {
-    color: $gray;
-    font-size: $smallText;
-
-    a:hover {
-      color: $darkGray;
-    }
-  }
-}
-
-.atvImg {
-  margin: 20px;
-  width: 240px;
-  height: 144px;
-  display: inline-block;
-}
-
-.icon {
-  margin: 1%;
-  width: 120px;
-}
-
-.social svg {
-  margin-bottom: 10px;
-  height: 40px;
-}
-
-.twitter:hover path {
-  fill: #55acee;
-}
-
-.instagram:hover path {
-  fill: #125688;
-}
-
-.imprint {
-  text-align: left;
-}
-
-.hint {
-  color: $gray;
-  font-size: $smallText;
 }
