@@ -7,6 +7,8 @@
 $color: #000;
 $secondaryColor: #aaa;
 $secondaryColorDark: #888;
+$linkColor: #007dff;
+$linkColorDark: #085eb9;
 $background: #fff;
 
 $DribbbleColor: #ea4c89;
@@ -79,6 +81,18 @@ body {
 	margin: 8%;
 	text-align: center;
 	background: $background;
+}
+
+p {
+	color: $secondaryColor;
+}
+
+a {
+	color: $linkColor;
+	
+	&:hover {
+		color: $linkColorDark;
+	}
 }
 
 header {
