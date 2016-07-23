@@ -155,13 +155,14 @@ footer {
   color: #aaa;
   border: 1px solid #aaa; }
 
-.imprint h2 {
-  margin: 40px 0 20px 0;
-  font-size: 21pt;
-  text-align: left;
-  letter-spacing: inherit; }
-.imprint p {
-  margin: 20px 0;
-  line-height: 1.4; }
+.imprint {
+  text-align: left; }
+  .imprint h2 {
+    margin: 40px 0 20px 0;
+    font-size: 21pt;
+    letter-spacing: inherit; }
+  .imprint p {
+    margin: 20px 0;
+    line-height: 1.4; }
 
 /*# sourceMappingURL=index.min.css.map */

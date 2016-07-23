@@ -265,10 +265,11 @@ footer {
 }
 
 .imprint {
+	text-align: left;
+	
 	h2 {
 		margin: 40px 0 20px 0;
 		font-size: $largeText;
-		text-align: left;
 		letter-spacing: inherit;
 	}
 	
