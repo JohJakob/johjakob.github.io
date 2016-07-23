@@ -13,8 +13,7 @@
   font-size: 16pt;
   text-decoration: none;
   outline: none;
-  -webkit-tap-highlight-color: transparent;
-  -ms-touch-action: none; }
+  -webkit-tap-highlight-color: transparent; }
 
 body {
   margin: 8%;
