@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="120px" height="120px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <rect id="Background" x="0" y="0" width="120" height="120" style="fill:url(#_Linear1);"/>
+    <g id="Telegram" transform="matrix(0.613061,-2.46519e-32,-2.46519e-32,0.613061,23.2163,23.2163)">
+        <g transform="matrix(1,0,0,1,-54.1651,-66.905)">
+            <path d="M98,175C94.112,175 94.773,173.532 93.432,169.831L82,132.206L170,80L98,175Z" style="fill:#c8daea;fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-54.1651,-66.905)">
+            <path d="M98,175C101,175 102.326,173.628 104,172L120,156.442L100.042,144.407L98,175Z" style="fill:#a9c9dd;fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-54.1651,-66.905)">
+            <path d="M100.04,144.41L148.4,180.139C153.919,183.184 157.901,181.607 159.276,175.016L178.961,82.253C180.976,74.172 175.881,70.508 170.602,72.904L55.012,117.475C47.122,120.64 47.168,125.042 53.573,127.003L83.236,136.262L151.909,92.937C155.151,90.971 158.127,92.028 155.685,94.195L100.04,144.41Z" style="fill:url(#_Linear2);fill-rule:nonzero;"/>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(7.34788e-15,120,-120,7.34788e-15,60,0)"><stop offset="0%" style="stop-color:#37aee2;stop-opacity:1"/><stop offset="100%" style="stop-color:#1e96c8;stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.1915,0.3655,-0.3655,0.1915,0.6597,0.4369)"><stop offset="0%" style="stop-color:#eff7fc;stop-opacity:1"/><stop offset="100%" style="stop-color:#fff;stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>

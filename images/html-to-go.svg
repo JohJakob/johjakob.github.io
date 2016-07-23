@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
-	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
-	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
-	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
-	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
-]>
-<svg version="1.1" id="HTML_to_go" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-<rect id="Background" fill="#2631EB" width="300" height="300"/>
-<path id="Icon" fill="#FFFFFF" d="M118.421,201.316L75,157.895v-11.843l43.421-43.42v19.737L90.79,150l27.632,27.632V201.316z
-	 M169.737,82.894l-23.685,134.211h-15.789l23.685-134.211H169.737z M181.579,201.316v-23.685L209.211,150l-27.632-27.631v-19.737
-	L225,146.052v11.843L181.579,201.316z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="120px" height="120px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g id="Background" transform="matrix(0.4,0,0,0.4,0,0)">
+        <rect x="0" y="0" width="300" height="300" style="fill:#2631eb;"/>
+    </g>
+    <g id="Icon" transform="matrix(0.4,0,0,0.4,0,0)">
+        <path d="M118.421,201.316L75,157.895L75,146.052L118.421,102.632L118.421,122.369L90.79,150L118.422,177.632L118.422,201.316L118.421,201.316ZM169.737,82.894L146.052,217.105L130.263,217.105L153.948,82.894L169.737,82.894ZM181.579,201.316L181.579,177.631L209.211,150L181.579,122.369L181.579,102.632L225,146.052L225,157.895L181.579,201.316Z" style="fill:#fff;fill-rule:nonzero;"/>
+    </g>
 </svg>

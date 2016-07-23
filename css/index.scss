@@ -1,0 +1,279 @@
+/* Made with <3 in Germany */
+
+/* Variables */
+
+/* Change fill of inline SVGs when using dark background */
+
+$color: #000;
+$secondaryColor: #aaa;
+$secondaryColorDark: #888;
+$background: #fff;
+
+$DribbbleColor: #ea4c89;
+$GitHubColor: #333; /* Change when using dark background */
+$CodePenColor: #000; /* Change when using dark background */
+$TwitterColor: #55acee;
+$InstagramColor: #e4405f;
+
+$gray: #aaa;
+$darkGray: #888;
+$lightGray: #ccc;
+
+$font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Symbol";
+
+$tinyText: 9pt;
+$smallText: 12pt;
+$text: 16pt;
+$largeText: 21pt;
+$hugeText: 37pt;
+
+$shadow: 0 4px 10px rgba(0, 0, 0, .2);
+$largeShadow: 0 16px 40px rgba(0, 0, 0, .2);
+
+/* Mixins */
+
+@mixin transitionSetUp($property, $time, $easing) {
+	transition: $property $time $easing;
+	-webkit-transition: $property $time $easing;
+	-moz-transition: $property $time $easing;
+	-o-transition: $property $time $easing;
+}
+
+@mixin twoTransitionsSetUp($firstProperty, $firstTime, $firstEasing, $secondProperty, $secondTime, $secondEasing) {
+	transition: $firstProperty $firstTime $firstEasing, $secondProperty $secondTime $secondEasing;
+	-webkit-transition: $firstProperty $firstTime $firstEasing, $secondProperty $secondTime $secondEasing;
+	-moz-transition: $firstProperty $firstTime $firstEasing, $secondProperty $secondTime $secondEasing;
+	-o-transition: $firstProperty $firstTime $firstEasing, $secondProperty $secondTime $secondEasing;
+}
+
+@mixin transform($property) {
+	transform: $property;
+	-webkit-transform: $property;
+	-moz-transform: $property;
+	-o-transform: $property;
+}
+
+@mixin gradient($firstGradientColor, $secondGradientColor) {
+  background: linear-gradient(top, $firstGradientColor, $secondGradientColor);
+  background: -webkit-linear-gradient(top, $firstGradientColor, $secondGradientColor);
+  background: -moz-linear-gradient(top, $firstGradientColor, $secondGradientColor);
+  background: -ms-linear-gradient(top, $firstGradientColor, $secondGradientColor);
+  background: -o-linear-gradient(top, $firstGradientColor, $secondGradientColor);
+}
+
+/* General */
+
+* {
+	margin: 0;
+	padding: 0;
+	color: $color;
+	font-family: $font;
+	font-size: $text;
+	text-decoration: none;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+	-ms-touch-action: none;
+}
+
+body {
+	margin: 8%;
+	text-align: center;
+	background: $background;
+}
+
+header {
+	margin: 0 auto 40px auto;
+	max-width: 400px;
+	
+	img {
+		width: 60px;
+		@include transitionSetUp(transform, .25s, ease);
+		
+		&:hover {
+			@include transform(scale(1.05));
+		}
+	}
+	
+	p {
+		margin: auto;
+		margin-bottom: 30px;
+		color: $secondaryColor;
+		font-size: $largeText;
+		font-weight: 300;
+		line-height: 1.4;
+		cursor: default;
+	}
+	
+	a {
+		color: $secondaryColorDark;
+		font-size: $largeText;
+		font-weight: 300;
+		
+		&:hover {
+			color: #000;
+		}
+	}
+	
+	svg {
+		margin-right: 12px;
+	}
+}
+
+h1 {
+	margin: 20px 0 10px 0;
+	font-size: $hugeText;
+	font-weight: 300;
+	cursor: default;
+}
+
+h2 {
+	margin: 40px 0 30px 0;
+	color: $secondaryColor;
+	font-size: $text;
+	font-weight: 400;
+	line-height: 1.4;
+	letter-spacing: .2em;
+	cursor: default;
+}
+
+ul {
+	list-style: none;
+	
+	li {
+		display: inline-block;
+	}
+	
+	p {
+		margin-bottom: 20px;
+		color: $secondaryColorDark;
+		font-size: $smallText;
+	}
+	
+	span {
+		color: $secondaryColor;
+		font-size: $smallText;
+	}
+}
+
+footer {
+	margin-top: 40px;
+	
+	a {
+		color: $secondaryColorDark;
+		font-size: $text;
+		
+		&:hover {
+			color: $color;
+		}
+	}
+	
+	p {
+		margin-top: 20px;
+		color: $secondaryColor;
+		font-size: $smallText;
+		cursor: default;
+		
+		a {
+			color: $secondaryColor;
+			font-size: $smallText;
+			
+			&:hover {
+				color: $secondaryColorDark;
+			}
+		}
+	}
+}
+
+/* Classes */
+
+.dribbble:hover {
+  path {
+    fill: $DribbbleColor;
+  }
+}
+
+.github:hover {
+  path {
+    fill: $GitHubColor;
+  }
+}
+
+.codepen:hover {
+  path {
+    fill: $CodePenColor;
+  }
+}
+
+.twitter:hover {
+  path {
+    fill: $TwitterColor;
+  }
+}
+
+.instagram:hover {
+  path {
+    fill: $InstagramColor;
+  }
+}
+
+.work, .contact {
+	img {
+		margin: 20px;
+		border-radius: 10px;
+		box-shadow: $shadow;
+		@include twoTransitionsSetUp(transform, .25s, ease, box-shadow, .25s, ease);
+		
+		&:hover {
+			@include transform(scale(1.05));
+			box-shadow: $largeShadow;
+		}
+	}
+}
+
+.apps {
+	img {
+		margin: 20px 20px 10px 20px;
+	}
+}
+
+.portfolio {
+	img {
+		margin: 20px 20px 10px 20px;
+		width: 80%;
+		max-width: 400px;
+		border-radius: 10px;
+		box-shadow: $shadow;
+		@include transitionSetUp(box-shadow, .25s, ease);
+		
+		&:hover {
+			box-shadow: $largeShadow;
+		}
+	}
+}
+
+.badge {
+	padding: 10px;
+	font-size: $smallText;
+	letter-spacing: .2em;
+	border-radius: 4px;
+	cursor: default;
+}
+
+.secondaryBadge {
+	color: $secondaryColor;
+	border: 1px solid $secondaryColor;
+}
+
+.imprint {
+	h2 {
+		margin: 40px 0 20px 0;
+		font-size: $largeText;
+		text-align: left;
+		letter-spacing: inherit;
+	}
+	
+	p {
+		margin: 20px 0;
+		line-height: 1.4;
+	}
+}
