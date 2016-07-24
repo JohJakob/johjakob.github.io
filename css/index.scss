@@ -84,6 +84,7 @@ body {
 
 p {
 	color: $secondaryColor;
+	cursor: default;
 }
 
 a {
@@ -114,7 +115,6 @@ header {
 		font-size: $largeText;
 		font-weight: 300;
 		line-height: 1.4;
-		cursor: default;
 	}
 
 	a {
@@ -160,7 +160,6 @@ ul {
 		margin-bottom: 20px;
 		color: $secondaryColorDark;
 		font-size: $smallText;
-		cursor: default;
 	}
 
 	span {
