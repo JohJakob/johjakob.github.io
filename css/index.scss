@@ -83,6 +83,7 @@ body {
 }
 
 p {
+	margin: 20px 0;
 	color: $secondaryColor;
 	cursor: default;
 }
@@ -157,7 +158,7 @@ ul {
 	}
 
 	p {
-		margin-bottom: 20px;
+		margin: 0 0 20px 0;
 		color: $secondaryColorDark;
 		font-size: $smallText;
 	}
