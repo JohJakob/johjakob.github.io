@@ -2,24 +2,14 @@
 
 /* Variables */
 
-/* Change fill of inline SVGs when using dark background */
+$gray: #ccc;
+$darkGray: #333;
+$white: #fff;
+$background: #1a1a1a;
 
-$color: #000;
-$secondaryColor: #aaa;
-$secondaryColorDark: #888;
-$linkColor: #007dff;
-$linkColorDark: #085eb9;
-$background: #fff;
-
-$DribbbleColor: #ea4c89;
-$GitHubColor: #333; /* Change when using dark background */
-$CodePenColor: #000; /* Change when using dark background */
-$TwitterColor: #55acee;
-$InstagramColor: #e4405f;
-
-$gray: #aaa;
-$darkGray: #888;
-$lightGray: #ccc;
+$dribbbleColor: #ea4c89;
+$twitterColor: #55acee;
+$instagramColor: #e4405f;
 
 $font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Symbol";
 
@@ -29,8 +19,8 @@ $text: 16pt;
 $largeText: 21pt;
 $hugeText: 37pt;
 
-$shadow: 0 4px 10px rgba(0, 0, 0, .2);
-$largeShadow: 0 16px 40px rgba(0, 0, 0, .2);
+$shadow: 0 5px 10px rgba(0, 0, 0, .2);
+$largeShadow: 0 20px 40px rgba(0, 0, 0, .2);
 
 /* Mixins */
 
@@ -38,260 +28,234 @@ $largeShadow: 0 16px 40px rgba(0, 0, 0, .2);
 	transition: $property $time $easing;
 	-webkit-transition: $property $time $easing;
 	-moz-transition: $property $time $easing;
-	-o-transition: $property $time $easing;
-}
-
-@mixin twoTransitionsSetUp($firstProperty, $firstTime, $firstEasing, $secondProperty, $secondTime, $secondEasing) {
-	transition: $firstProperty $firstTime $firstEasing, $secondProperty $secondTime $secondEasing;
-	-webkit-transition: $firstProperty $firstTime $firstEasing, $secondProperty $secondTime $secondEasing;
-	-moz-transition: $firstProperty $firstTime $firstEasing, $secondProperty $secondTime $secondEasing;
-	-o-transition: $firstProperty $firstTime $firstEasing, $secondProperty $secondTime $secondEasing;
-}
-
-@mixin transform($property) {
-	transform: $property;
-	-webkit-transform: $property;
-	-moz-transform: $property;
-	-o-transform: $property;
+	-o-transition: $property $time $easing
 }
 
 @mixin gradient($firstGradientColor, $secondGradientColor) {
-  background: linear-gradient(top, $firstGradientColor, $secondGradientColor);
   background: -webkit-linear-gradient(top, $firstGradientColor, $secondGradientColor);
   background: -moz-linear-gradient(top, $firstGradientColor, $secondGradientColor);
   background: -ms-linear-gradient(top, $firstGradientColor, $secondGradientColor);
   background: -o-linear-gradient(top, $firstGradientColor, $secondGradientColor);
+  background: linear-gradient(top, $firstGradientColor, $secondGradientColor)
 }
 
 /* General */
 
 * {
-	margin: 0;
-	padding: 0;
-	color: $color;
-	font-family: $font;
-	font-size: $text;
-	text-decoration: none;
-	outline: none;
-	-webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  color: $gray;
+  font-family: $font;
+  font-size: $text;
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent
 }
 
 body {
-	margin: 8%;
-	text-align: center;
-	background: $background;
-}
-
-p {
-	margin: 20px 0;
-	color: $secondaryColor;
-	cursor: default;
-}
-
-a {
-	color: $linkColor;
-
-	&:hover {
-		color: $linkColorDark;
-	}
+  padding: 5%;
+  text-align: center;
+  background: $background
 }
 
 header {
-	margin: 0 auto 40px auto;
-	max-width: 400px;
+  margin-bottom: 40px;
 
-	img {
-		width: 60px;
-		@include transitionSetUp(transform, .25s, ease);
+  li {
+    margin: 0 2%;
+    font-weight: 200
+  }
 
-		&:hover {
-			@include transform(scale(1.05));
-		}
-	}
-
-	p {
-		margin: auto;
-		margin-bottom: 30px;
-		color: $secondaryColor;
-		font-size: $largeText;
-		font-weight: 300;
-		line-height: 1.4;
-	}
-
-	a {
-		color: $secondaryColorDark;
-		font-size: $largeText;
-		font-weight: 300;
-
-		&:hover {
-			color: #000;
-		}
-	}
-
-	svg {
-		margin-right: 12px;
-	}
+  svg {
+    margin: 40px 10px 0 10px
+  }
 }
 
 h1 {
-	margin: 20px 0 10px 0;
-	font-size: $hugeText;
-	font-weight: 300;
-	cursor: default;
-}
+  margin-bottom: 40px;
+  color: $white;
+  font-size: $largeText;
+  font-weight: 600;
+  letter-spacing: .02em;
+  cursor: default;
 
-h2 {
-	margin: 40px 0 30px 0;
-	color: $secondaryColor;
-	font-size: $text;
-	font-weight: 400;
-	line-height: 1.4;
-	letter-spacing: .2em;
-	text-transform: uppercase;
-	cursor: default;
+  span, a {
+    font-size: $largeText;
+    font-weight: 100
+  }
 }
 
 ul {
-	list-style: none;
+  list-style: none
+}
 
-	li {
-		display: inline-block;
-	}
+li {
+  display: inline-block
+}
 
-	p {
-		margin: 0 0 20px 0;
-		color: $secondaryColorDark;
-		font-size: $smallText;
-	}
+a:hover {
+  color: $white
+}
 
-	span {
-		color: $secondaryColor;
-		font-size: $smallText;
-	}
+main {
+  ul p {
+    margin-bottom: 20px;
+    color: $darkGray;
+    font-size: $smallText;
+    font-weight: 100;
+    font-style: italic;
+    cursor: default
+  }
+
+  li {
+    margin: 0 2%
+  }
+
+  img {
+    margin-bottom: 20px
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    font-weight: 400;
+    cursor: default
+  }
 }
 
 footer {
-	margin-top: 40px;
+  svg {
+    margin: 20px 10px
+  }
 
-	a {
-		color: $secondaryColorDark;
+  p {
+    color: $darkGray;
+    font-size: $smallText;
+    cursor: default;
 
-		&:hover {
-			color: $color;
-		}
-	}
+    a {
+      color: $darkGray;
+      font-size: $smallText;
 
-	p {
-		margin-top: 20px;
-		color: $secondaryColor;
-		font-size: $smallText;
-		cursor: default;
+      &:hover {
+        color: $gray
+      }
+    }
+  }
+}
 
-		a {
-			color: $secondaryColor;
-			font-size: $smallText;
+::selection {
+  color: $background;
+  background: $white
+}
 
-			&:hover {
-				color: $secondaryColorDark;
-			}
-		}
-	}
+::-moz-selection {
+  color: $background;
+  background: $white
 }
 
 /* Classes */
 
+.current {
+  color: $white;
+  font-weight: 600;
+  cursor: default;
+
+  a {
+    color: $white
+  }
+}
+
+.work {
+  img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: $shadow;
+    @include transitionSetUp(box-shadow, .2s, ease);
+
+		&:hover {
+			box-shadow: $largeShadow
+		}
+  }
+}
+
+.apps {
+  img {
+    margin-top: 20px;
+    width: 120px
+  }
+}
+
+.about {
+  margin: 0 auto 40px auto;
+  max-width: 800px;
+  text-align: left;
+
+  h2 {
+    color: $white;
+    font-size: $largeText
+  }
+
+  p {
+    margin: 20px 0;
+    font-weight: 200;
+    line-height: 1.7;
+    letter-spacing: .05em;
+
+    a {
+      font-weight: 600
+    }
+  }
+}
+
 .dribbble:hover {
   path {
-    fill: $DribbbleColor;
+    fill: $dribbbleColor
   }
 }
 
 .github:hover {
   path {
-    fill: $GitHubColor;
+    fill: $white
   }
 }
 
 .codepen:hover {
   path {
-    fill: $CodePenColor;
+    fill: $white
   }
 }
 
 .twitter:hover {
   path {
-    fill: $TwitterColor;
+    fill: $twitterColor
   }
 }
 
 .instagram:hover {
   path {
-    fill: $InstagramColor;
+    fill: #e4405f
   }
 }
 
-.work, .contact {
-	img {
-		margin: 20px;
-		border-radius: 10px;
-		box-shadow: $shadow;
-		@include twoTransitionsSetUp(transform, .25s, ease, box-shadow, .25s, ease);
-
-		&:hover {
-			@include transform(scale(1.05));
-			box-shadow: $largeShadow;
-		}
-	}
-}
-
-.apps {
-	img {
-		margin: 20px 20px 10px 20px;
-		width: 120px;
-	}
-}
-
-.portfolio {
-	img {
-		margin: 20px 20px 10px 20px;
-		width: 80%;
-		max-width: 400px;
-		border-radius: 10px;
-		box-shadow: $shadow;
-		@include transitionSetUp(box-shadow, .25s, ease);
-
-		&:hover {
-			box-shadow: $largeShadow;
-		}
-	}
-}
-
-.badge {
-	padding: 10px;
-	font-size: $smallText;
-	letter-spacing: .2em;
-	border-radius: 4px;
-	text-transform: uppercase;
-	cursor: default;
-}
-
-.secondaryBadge {
-	color: $secondaryColor;
-	border: 1px solid $secondaryColor;
-}
-
 .imprint {
-	text-align: left;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
 
-	h2 {
-		margin: 40px 0 20px 0;
-		font-size: $largeText;
-		letter-spacing: inherit;
-	}
+  h1 {
+    margin-bottom: 20px;
+    color: $white;
+    font-size: $hugeText
+  }
 
-	p {
-		margin: 20px 0;
-		color: $color;
-		line-height: 1.4;
-	}
+  h2 {
+    color: $white;
+    font-size: $largeText
+  }
+
+  p {
+    margin: 20px 0;
+    line-height: 1.5
+  }
 }
