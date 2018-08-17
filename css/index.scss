@@ -12,6 +12,7 @@ $margin-padding__containers: 8%;
 $margin-padding__link: .5em;
 $margin-padding__inset: .5rem;
 
+$size_mobile__text-max-width: 600px;
 $size__text-max-width: 50%;
 
 $color__white: #fff;
@@ -107,7 +108,7 @@ main {
 
 	h1, h2, h3, p, ul {
 		margin: 0 $margin-padding__containers .7em $margin-padding__containers;
-		max-width: $size__text-max-width
+		max-width: $size_mobile__text-max-width
 	}
 
 	h1 {
@@ -128,7 +129,7 @@ main {
 
 	p {
 		color: $color__gray;
-		line-height: 1.2;
+		line-height: 1.5;
 
 		a {
 			font-weight: 500
@@ -378,7 +379,8 @@ figure {
 		padding: $margin-padding__containers $margin-padding__containers $margin-padding__inset $margin-padding__containers / 2;
 
 		h1, h2, h3, p, ul {
-			margin: 0 $margin-padding__inset * 2 .7em $margin-padding__inset * 2
+			margin: 0 $margin-padding__inset * 2 .7em $margin-padding__inset * 2;
+			max-width: $size__text-max-width;
 		}
 	}
 
