@@ -12,7 +12,7 @@ $margin-padding__containers: 8%;
 $margin-padding__link: .5em;
 $margin-padding__inset: .5rem;
 
-$size__text-max-width: 600px;
+$size__text-max-width: 50%;
 
 $color__white: #fff;
 $color__black: #222;
@@ -103,6 +103,7 @@ header {
 
 main {
 	padding: $margin-padding__containers 0 $margin-padding__inset;
+	position: relative;
 
 	h1, h2, h3, p, ul {
 		margin: 0 $margin-padding__containers .7em $margin-padding__containers;
@@ -162,6 +163,14 @@ footer {
 
 ul {
 	list-style: none
+}
+
+figure {
+	margin-bottom: 1em;
+
+	img {
+		width: 100%
+	}
 }
 
 // Classes
@@ -426,6 +435,12 @@ ul {
 				background: url('/images/back_arrow-hovered.svg') center center no-repeat
 			}
 		}
+	}
+
+	.figure-float-right {
+		right: 0;
+		position: absolute;
+		max-width: 48%
 	}
 }
 
