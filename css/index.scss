@@ -106,7 +106,7 @@ main {
 	padding: $margin-padding__containers 0 $margin-padding__inset;
 	position: relative;
 
-	h1, h2, h3, p, ul {
+	article {
 		margin: 0 $margin-padding__containers .7em $margin-padding__containers;
 		max-width: $size_mobile__text-max-width
 	}
@@ -378,7 +378,7 @@ figure {
 	main {
 		padding: $margin-padding__containers $margin-padding__containers $margin-padding__inset $margin-padding__containers / 2;
 
-		h1, h2, h3, p, ul {
+		article {
 			margin: 0 $margin-padding__inset * 2 .7em $margin-padding__inset * 2;
 			max-width: $size__text-max-width;
 		}
