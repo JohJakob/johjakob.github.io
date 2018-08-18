@@ -15,6 +15,8 @@ $margin-padding__inset: .5rem;
 $size_mobile__text-max-width: 600px;
 $size__text-max-width: 50%;
 
+$size__default-image-max-width: 600px;
+
 $color__white: #fff;
 $color__black: #222;
 $color__gray: #555;
@@ -103,12 +105,33 @@ header {
 }
 
 main {
+	margin: 0 auto;
 	padding: $margin-padding__containers 0 $margin-padding__inset;
 	position: relative;
 
 	article {
-		margin: 0 $margin-padding__containers .7em $margin-padding__containers;
-		max-width: $size_mobile__text-max-width
+		h1, h2, h3, p, ul {
+			margin: 0 $margin-padding__containers .7em $margin-padding__containers
+		}
+
+		figure {
+			margin-bottom: 1em;
+
+			img {
+				margin: 0 auto;
+				width: 100%;
+				max-width: $size__default-image-max-width;
+				display: block
+			}
+		}
+
+		figcaption {
+			margin: $margin-padding__inset $margin-padding__containers 0 $margin-padding__containers;
+			color: $color__gray;
+			font-size: .8em;
+			line-height: 1.2;
+			font-style: italic
+		}
 	}
 
 	h1 {
@@ -166,14 +189,6 @@ ul {
 	list-style: none
 }
 
-figure {
-	margin-bottom: 1em;
-
-	img {
-		width: 100%
-	}
-}
-
 // Classes
 
 .nav-li-active {
@@ -188,6 +203,10 @@ figure {
 	a {
 		margin: 0 auto $margin-padding__inset * 3 auto;
 		display: block;
+
+		figure {
+			margin: 0
+		}
 
 		img {
 			width: 100%
@@ -244,6 +263,26 @@ figure {
 		-o-animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse;
 		animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse
 	}
+}
+
+.figure-float-right {
+	margin-bottom: 1em;
+	
+	img {
+		width: 100%
+	}
+}
+
+.img-default {
+	max-width: $size__default-image-max-width
+}
+
+.img-gif {
+	cursor: pointer
+}
+
+.img-iphone-4-inch {
+	max-width: 320px
 }
 
 .main-photos a {
@@ -376,11 +415,19 @@ figure {
 	}
 
 	main {
+		margin: 0;
 		padding: $margin-padding__containers $margin-padding__containers $margin-padding__inset $margin-padding__containers / 2;
 
 		article {
-			margin: 0 $margin-padding__inset * 2 .7em $margin-padding__inset * 2;
 			max-width: $size__text-max-width;
+
+			h1, h2, h3, p, ul {
+				margin: 0 $margin-padding__inset * 2 .7em $margin-padding__inset * 2
+			}
+
+			figcaption {
+				margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2
+			}
 		}
 	}
 
@@ -424,6 +471,10 @@ figure {
 		p {
 			margin-left: $margin-padding__inset * 2
 		}
+
+		a {
+			font-weight: 500
+		}
 	}
 
 	.a-back {
@@ -440,8 +491,10 @@ figure {
 	}
 
 	.figure-float-right {
+		margin: 0;
 		right: 0;
 		position: absolute;
+		width: auto;
 		max-width: 48%
 	}
 }
