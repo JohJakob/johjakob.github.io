@@ -6,53 +6,7 @@
 // Made with <3 in Germany
 //
 
-// Variables
-
-$margin-padding__containers: 8%;
-$margin-padding__link: .5em;
-$margin-padding__inset: .5rem;
-
-$size_mobile__text-max-width: 600px;
-$size__text-max-width: 50%;
-
-$size__default-image-max-width: 600px;
-
-$color__white: #fff;
-$color__black: #222;
-$color__gray: #555;
-$color__light-gray: #f3f3f3;
-
-/*$margin-padding__containers: 8%;
-$margin-padding__link-list: .5em;
-$margin-padding__text-inset: $margin-padding__containers / 2;
-
-$size__text-max-width: 600px;
-$size__work-figure-max-width: 600px;
-
-$color__white: #fff;
-$color__black: #222;
-$color__gray: #aaa;
-$color__light-gray: #f3f3f3;
-$color__dark-gray: #666;*/
-
-$color__dribbble: #ea4c89;
-$color__github: #171515;
-$color__codepen: #000;
-$color__twitter: #55acee;
-$color__instagram: #e4405f;
-$color__500px: #0099e5;
-
-$border-radius__small: 6px;
-
-// Mixins
-
-@mixin three-stop-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color) {
-	background: -webkit-linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
-  background: -moz-linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
-  background: -ms-linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
-  background: -o-linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
-  background: linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
-}
+@import "variables";
 
 // Base
 
@@ -110,8 +64,17 @@ main {
 	position: relative;
 
 	article {
+		section {
+			margin-bottom: 2em;
+			max-width: $size__text-max-width
+		}
+
 		h1, h2, h3, p, ul {
-			margin: 0 $margin-padding__containers .7em $margin-padding__containers
+			margin: 0 $margin-padding__containers .5em $margin-padding__containers
+		}
+
+		img {
+			width: 100%
 		}
 
 		figure {
@@ -119,7 +82,6 @@ main {
 
 			img {
 				margin: 0 auto;
-				width: 100%;
 				max-width: $size__default-image-max-width;
 				display: block
 			}
@@ -152,6 +114,7 @@ main {
 
 	p {
 		color: $color__gray;
+		font-size: .8em;
 		line-height: 1.5;
 
 		a {
@@ -189,337 +152,9 @@ ul {
 	list-style: none
 }
 
-// Classes
-
-.nav-li-active {
-	font-weight: 700;
-
-	a {
-		color: $color__black
-	}
-}
-
-.main-work, .main-photos {
-	a {
-		margin: 0 auto $margin-padding__inset * 3 auto;
-		display: block;
-
-		figure {
-			margin: 0
-		}
-
-		img {
-			width: 100%
-		}
-
-		figcaption {
-			margin: $margin-padding__inset $margin-padding__containers 0 $margin-padding__containers;
-			font-weight: 500;
-
-			span {
-				margin-top: .2em;
-				color: $color__gray;
-				font-size: .8em;
-				font-weight: 400;
-				display: block
-			}
-		}
-	}
-}
-
-.main-work {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center
-}
-
-.main-detail {
-	img {
-		margin-bottom: $margin-padding__inset * 2;
-		width: 100%;
-		max-width: 1000px;
-		height: auto;
-		display: block
-	}
-}
-
-.section-more {
-	padding: 0 $margin-padding__containers;
-	position: relative;
-
-	&:before {
-		left: 0;
-		position: absolute;
-		width: 17px;
-		height: 100%;
-		content: "";
-		background: url('/images/arrow.svg');
-		background-position: center center;
-		background-repeat: no-repeat;
-		display: none;
-		-webkit-animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse;
-		-moz-animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse;
-		-o-animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse;
-		animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse
-	}
-}
-
-.figure-float-right {
-	margin-bottom: 1em;
-	
-	img {
-		width: 100%
-	}
-}
-
-.img-default {
-	max-width: $size__default-image-max-width
-}
-
-.img-gif {
-	cursor: pointer
-}
-
-.img-iphone-4-inch {
-	max-width: 320px
-}
-
-.main-photos a {
-	margin: 0 0 $margin-padding__inset * 3 0
-}
-
-.a-dribbble:hover {
-	color: $color__dribbble
-}
-
-.a-500px:hover {
-	color: $color__500px
-}
-
-.a-instagram:hover {
-	color: $color__instagram
-}
-
-.ul-a-dribbble:hover svg path {
-	fill: $color__dribbble
-}
-
-.ul-a-github:hover svg path {
-	fill: $color__github
-}
-
-.ul-a-codepen:hover svg path {
-	fill: $color__codepen
-}
-
-.ul-a-twitter:hover svg path {
-	fill: $color__twitter
-}
-
-.ul-a-instagram:hover svg path {
-	fill: $color__instagram
-}
-
-.a-back {
-	margin: 0 $margin-padding__containers $margin-padding__inset * 2 $margin-padding__containers;
-	padding: $margin-padding__inset $margin-padding__inset $margin-padding__inset $margin-padding__inset * 2.5;
-	position: relative;
-	color: $color__gray;
-	font-size: .8em;
-	display: block;
-
-	&:before {
-		top: .025em;
-		left: 0;
-		position: absolute;
-		width: 17px;
-		height: 100%;
-		content: "";
-		background: url('/images/back_arrow.svg') center center no-repeat
-	}
-}
-
-.ul-default {
-	margin-left: $margin-padding__inset * 6;
-	color: $color__gray;
-	list-style: inherit
-}
-
-.ul-skills {
-	margin-bottom: .5em;
-	line-height: 1.5;
-	list-style: none;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-
-	li {
-		margin: .2em .4em .2em 0;
-		padding: .5em .8em;
-		color: $color__gray;
-		font-size: .8em;
-		background: $color__light-gray;
-		border-radius: $border-radius__small
-	}
-}
-
-.p-hint {
-	margin-top: 1.2em;
-	color: lighten($color__black, 40%);
-	font-size: .8em;
-
-	a {
-		color: $color__gray;
-
-		&:hover {
-			color: $color__black
-		}
-	}
-}
-
-.a-mail:after {
-	content: attr(data-name) "@" attr(data-domain) "." attr(data-tld)
-}
-
-// Screen Size Adaptions
-
-@media (min-width: 801px) {
-	// Base
-
-	header {
-		padding: $margin-padding__containers $margin-padding__containers / 4 0 $margin-padding__containers;
-		position: fixed;
-		width: 25vw;
-
-		ul {
-			display: inherit;
-
-			li a {
-				margin-left: -1 * $margin-padding__link;
-				padding: $margin-padding__link;
-				display: block;
-				border-radius: $border-radius__small;
-	
-				&:hover {
-					color: $color__black;
-					background: $color__light-gray
-				}
-			}
-		}
-	}
-
-	main, footer {
-		width: 75vw;
-		transform: translateX(25vw)
-	}
-
-	main {
-		margin: 0;
-		padding: $margin-padding__containers $margin-padding__containers $margin-padding__inset $margin-padding__containers / 2;
-
-		article {
-			max-width: $size__text-max-width;
-
-			h1, h2, h3, p, ul {
-				margin: 0 $margin-padding__inset * 2 .7em $margin-padding__inset * 2
-			}
-
-			figcaption {
-				margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2
-			}
-		}
-	}
-
-	footer {
-		padding-left: $margin-padding__containers / 2;
-
-		ul, p {
-			margin-left: $margin-padding__inset * 2
-		}
-
-		ul {
-			justify-content: flex-start;
-
-			li {
-				margin-right: $margin-padding__inset * 3
-			}
-		}
-	}
-
-	// Classes
-
-	.main-work a {
-		margin: 0 0 $margin-padding__inset * 3 0;
-		width: 48%;
-		max-width: 600px;
-	}
-
-	.main-work a figcaption, .main-photos a figcaption {
-		margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2
-	}
-
-	.section-more {
-		padding: 0 $margin-padding__containers / 2;
-		width: 75vw;
-		transform: translateX(25vw);
-
-		&:before {
-			display: block
-		}
-
-		p {
-			margin-left: $margin-padding__inset * 2
-		}
-
-		a {
-			font-weight: 500
-		}
-	}
-
-	.a-back {
-		margin: -.4em $margin-padding__inset * 2 $margin-padding__inset * 2 $margin-padding__inset * 2;
-
-		&:hover {
-			color: $color__black;
-			
-			&:before {
-				left: 0;
-				background: url('/images/back_arrow-hovered.svg') center center no-repeat
-			}
-		}
-	}
-
-	.figure-float-right {
-		margin: 0;
-		right: 0;
-		position: absolute;
-		width: auto;
-		max-width: 48%
-	}
-}
-
-// Keyframes
-
-@-webkit-keyframes arrow-animation {
-	from { left: 2em }
-	to { left: 2.5em }
-}
-
-@-moz-keyframes arrow-animation {
-	from { left: 2em }
-	to { left: 2.5em }
-}
-
-@-o-keyframes arrow-animation {
-	from { left: 2em }
-	to { left: 2.5em }
-}
-
-@keyframes arrow-animation {
-	from { left: 2em }
-	to { left: 2.5em }
-}
+@import "classes";
+@import "size-adaptations";
+@import "keyframes";
 
 /*header {
 	padding: $margin-padding__containers $margin-padding__containers 0 $margin-padding__containers;

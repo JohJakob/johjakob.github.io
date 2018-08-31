@@ -1,0 +1,211 @@
+//
+// classes.scss
+// johjakob.de
+//
+// © 2014-2018 Johannes Jakob
+// Made with <3 in Germany
+//
+
+@import "variables";
+
+.nav-li-active {
+	font-weight: 700;
+
+	a {
+		color: $color__black
+	}
+}
+
+.main-work, .main-photos {
+	a {
+		margin: 0 auto $margin-padding__inset * 3 auto;
+		display: block;
+
+		figure {
+			margin: 0
+		}
+
+		img {
+			width: 100%
+		}
+
+		figcaption {
+			margin: $margin-padding__inset $margin-padding__containers 0 $margin-padding__containers;
+			font-weight: 500;
+
+			span {
+				margin-top: .2em;
+				color: $color__gray;
+				font-size: .8em;
+				font-weight: 400;
+				display: block
+			}
+		}
+	}
+}
+
+.main-work {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center
+}
+
+.main-detail {
+	img {
+		margin-bottom: $margin-padding__inset * 2;
+		width: 100%;
+		max-width: 1000px;
+		height: auto;
+		display: block
+	}
+}
+
+.section-more {
+	padding: 0 $margin-padding__containers;
+	position: relative;
+
+	&:before {
+		left: 0;
+		position: absolute;
+		width: 17px;
+		height: 100%;
+		content: "";
+		background: url('/images/arrow.svg');
+		background-position: center center;
+		background-repeat: no-repeat;
+		display: none;
+		-webkit-animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse;
+		-moz-animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse;
+		-o-animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse;
+		animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse
+	}
+}
+
+.figure-float-right {
+	margin-bottom: 1em;
+	
+	img {
+		width: 100%
+	}
+}
+
+.img-gif {
+	cursor: pointer
+}
+
+.img-iphone-4-inch {
+	max-width: 320px
+}
+
+.main-photos a {
+	margin: 0 0 $margin-padding__inset * 3 0
+}
+
+.a-dribbble:hover {
+	color: $color__dribbble
+}
+
+.a-500px:hover {
+	color: $color__500px
+}
+
+.a-instagram:hover {
+	color: $color__instagram
+}
+
+.ul-images {
+	margin: 0;
+	
+	li {
+		margin-bottom: 1em
+	}
+}
+
+.ul-a-dribbble:hover svg path {
+	fill: $color__dribbble
+}
+
+.ul-a-github:hover svg path {
+	fill: $color__github
+}
+
+.ul-a-codepen:hover svg path {
+	fill: $color__codepen
+}
+
+.ul-a-twitter:hover svg path {
+	fill: $color__twitter
+}
+
+.ul-a-instagram:hover svg path {
+	fill: $color__instagram
+}
+
+.a-back {
+	margin: 0 $margin-padding__containers $margin-padding__inset * 2 $margin-padding__containers;
+	padding: $margin-padding__inset $margin-padding__inset $margin-padding__inset $margin-padding__inset * 2.5;
+	position: relative;
+	color: $color__gray;
+	font-size: .8em;
+	display: block;
+
+	&:before {
+		top: .025em;
+		left: 0;
+		position: absolute;
+		width: 17px;
+		height: 100%;
+		content: "";
+		background: url('/images/back_arrow.svg') center center no-repeat
+	}
+}
+
+.ul-default {
+	margin-left: $margin-padding__inset * 6;
+	color: $color__gray;
+	list-style: inherit
+}
+
+.ul-skills {
+	margin-bottom: .5em;
+	line-height: 1.5;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	li {
+		margin: .2em .4em .2em 0;
+		padding: .5em .8em;
+		color: $color__gray;
+		font-size: .8em;
+		background: $color__light-gray;
+		border-radius: $border-radius__small
+	}
+}
+
+.p-hint {
+	margin-top: 1.2em;
+	color: lighten($color__black, 40%);
+	font-size: .8em;
+
+	a {
+		color: $color__gray;
+
+		&:hover {
+			color: $color__black
+		}
+	}
+}
+
+.a-mail:after {
+	content: attr(data-name) "@" attr(data-domain) "." attr(data-tld)
+}
+
+.span-show-static {
+	margin-top: .5em;
+	font-style: normal;
+	display: block;
+	cursor: pointer
+}

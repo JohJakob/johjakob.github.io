@@ -1,0 +1,55 @@
+//
+// variables.scss
+// johjakob.de
+//
+// © 2014-2018 Johannes Jakob
+// Made with <3 in Germany
+//
+
+$margin-padding__containers: 8vw;
+$margin-padding__link: .5em;
+$margin-padding__inset: .5rem;
+
+$size__text-max-width: 600px;
+
+$size__default-image-max-width: 600px;
+
+$size__grid-column-gap: 20px;
+$size__grid-row-gap: 15px;
+
+$color__white: #fff;
+$color__black: #222;
+$color__gray: #555;
+$color__light-gray: #f3f3f3;
+
+/*$margin-padding__containers: 8%;
+$margin-padding__link-list: .5em;
+$margin-padding__text-inset: $margin-padding__containers / 2;
+
+$size__text-max-width: 600px;
+$size__work-figure-max-width: 600px;
+
+$color__white: #fff;
+$color__black: #222;
+$color__gray: #aaa;
+$color__light-gray: #f3f3f3;
+$color__dark-gray: #666;*/
+
+$color__dribbble: #ea4c89;
+$color__github: #171515;
+$color__codepen: #000;
+$color__twitter: #55acee;
+$color__instagram: #e4405f;
+$color__500px: #0099e5;
+
+$border-radius__small: 6px;
+
+// Mixins
+
+@mixin three-stop-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color) {
+	background: -webkit-linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
+  background: -moz-linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
+  background: -ms-linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
+  background: -o-linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
+  background: linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
+}

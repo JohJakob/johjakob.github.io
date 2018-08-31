@@ -1,0 +1,161 @@
+//
+// size-adaptations.scss
+// johjakob.de
+//
+// © 2014-2018 Johannes Jakob
+// Made with <3 in Germany
+//
+
+@import "variables";
+
+@media (min-width: 801px) {
+	// Base
+
+	header {
+		padding: $margin-padding__containers $margin-padding__containers / 4 0 $margin-padding__containers;
+		position: fixed;
+		width: 25vw;
+
+		ul {
+			display: inherit;
+
+			li a {
+				margin-left: -1 * $margin-padding__link;
+				padding: $margin-padding__link;
+				display: block;
+				border-radius: $border-radius__small;
+	
+				&:hover {
+					color: $color__black;
+					background: $color__light-gray
+				}
+			}
+		}
+	}
+
+	main, footer {
+		width: 75vw;
+		transform: translateX(25vw)
+	}
+
+	main {
+		margin: 0;
+		padding: $margin-padding__containers $margin-padding__containers $margin-padding__inset $margin-padding__containers / 2;
+
+		article {
+			margin-top: -.2em;
+
+			section {
+				max-width: $size__text-max-width
+			}
+
+			h1, h2, h3, p, ul {
+				margin: 0 $margin-padding__inset * 2 .5em $margin-padding__inset * 2
+			}
+
+			figcaption {
+				margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2
+			}
+		}
+	}
+
+	footer {
+		padding-left: $margin-padding__containers / 2;
+
+		ul, p {
+			margin-left: $margin-padding__inset * 2
+		}
+
+		ul {
+			justify-content: flex-start;
+
+			li {
+				margin-right: $margin-padding__inset * 3
+			}
+		}
+	}
+	
+	// Classes
+
+	.main-work a {
+    margin: 0 0 $margin-padding__inset * 3 0;
+    width: 48%;
+    max-width: 600px; /* TODO */
+  }
+
+  .main-work a figcaption, .main-photos a figcaption {
+    margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2
+  }
+
+  .section-more {
+    padding: 0 $margin-padding__containers / 2;
+    width: 75vw;
+    transform: translateX(25vw);
+
+    &:before {
+      display: block
+    }
+
+    p {
+      margin-left: $margin-padding__inset * 2
+    }
+
+    a {
+      font-weight: 500
+    }
+  }
+
+  .a-back {
+    margin: -.4em $margin-padding__inset * 2 $margin-padding__inset * 2 $margin-padding__inset * 2;
+
+    &:hover {
+      color: $color__black;
+      
+      &:before {
+        left: 0;
+        background: url('/images/back_arrow-hovered.svg') center center no-repeat
+      }
+    }
+  }
+
+  .figure-float-right {
+    margin: 0;
+    right: 0;
+    position: absolute;
+    width: auto;
+    max-width: 48%
+  }
+
+  .figure-left {
+    display: flex;
+    align-items: flex-end;
+
+    img {
+      margin: 0;
+      width: auto
+    }
+
+    figcaption {
+      margin-bottom: $margin-padding__inset
+    }
+  }
+	
+	@supports (display: grid) {
+		.ul-images {
+			max-width: $size__default-image-max-width * 2;
+			display: grid;
+			grid-template-columns: 50% 50%;
+			grid-column-gap: $size__grid-column-gap;
+			grid-row-gap: $size__grid-row-gap;
+
+			li {
+				margin: 0
+			}
+		}
+
+		.li-grid-full {
+			grid-column: 1 / 3
+		}
+	}
+}
+  

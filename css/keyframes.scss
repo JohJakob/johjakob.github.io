@@ -1,0 +1,27 @@
+//
+// keyframes.scss
+// johjakob.de
+//
+// © 2014-2018 Johannes Jakob
+// Made with <3 in Germany
+//
+
+@-webkit-keyframes arrow-animation {
+	from { left: 2em }
+	to { left: 2.5em }
+}
+
+@-moz-keyframes arrow-animation {
+	from { left: 2em }
+	to { left: 2.5em }
+}
+
+@-o-keyframes arrow-animation {
+	from { left: 2em }
+	to { left: 2.5em }
+}
+
+@keyframes arrow-animation {
+	from { left: 2em }
+	to { left: 2.5em }
+}
