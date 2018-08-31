@@ -51,30 +51,28 @@
 	</header>
 	<main>
     <article>
+			<section>
       <h1>Shellac &ndash; iOS App</h1>
-      <p>In times of online music streaming services and playlists, Shellac takes a step back and focuses on offline content and individual artists.</p>
-      <figure>
-        <img src="/images/work/shellac/shellac.png" srcset="/images/work/shellac/shellac@2x.png 2x, /images/work/shellac/shellac.png 1x" alt="Shellac&#700;s interface">
-        <figcaption>Human interface of Shellac, favorites displayed at the top, the whole library below</figcaption>
-      </figure>
-      <p>Shellac displays all albums the user has locally stored on their device. Tapping on a cover starts playing the desired album. The only playback control is a play/pause button, but the user can still skip songs via the headphone remote or Control Center.</p>
-      <figure id="figure-shellac-favorites">
-        <noscript>
-          <img class="img-iphone-4-inch" src="/images/work/shellac/shellac_favorites_still.png" srcset="/images/work/shellac/shellac_favorites_still@2x.png 2x, /images/work/shellac/shellac_favorites_still.png 1x" alt="Album popover sheet in Shellac">
-        </noscript>
-        <figcaption>Adding and removing a favorite using the popover sheet</figcaption>
-      </figure>
-      <p>Albums can be added to or removed from the favorites section by tapping and holding the cover.</p>
-      <figure>
-        <img src="/images/work/shellac/shellac_icon.png" srcset="/images/work/shellac/shellac_icon@2x.png 2x, /images/work/shellac/shellac_icon.png 1x" alt="Shellac&#700;s app icon">
-        <figcaption>Shellac&#700;s app icon</figcaption>
-      </figure>
-    </article>
+				<p>In times of online music streaming services and playlists, Shellac takes a step back and focuses on offline content and individual artists.</p>
+				<p>Shellac displays all albums the user has locally stored on their device. Tapping on a cover starts playing the desired album. The only playback control is a play/pause button, but the user can still skip songs via the headphone remote or Control Center.</p>
+				<!--<figure id="figure-shellac-favorites" class="figure-left">
+					<noscript>
+						<img class="img-iphone-4-inch" src="/images/work/shellac/shellac_favorites_still.png" srcset="/images/work/shellac/shellac_favorites_still@2x.png 2x, /images/work/shellac/shellac_favorites_still.png 1x" alt="Album popover sheet in Shellac">
+					</noscript>
+					<figcaption>
+						Adding and removing a favorite using the popover sheet<br>
+						<span class="span-show-static" data-static-path="/images/work/shellac/shellac_favorites_still" data-static-filetype="png" data-dynamic-path="/images/work/shellac/shellac_favorites" data-dynamic-filetype="gif" role="button">Show static image</span>
+					</figcaption>
+				</figure>-->
+				<p>Albums can be added to or removed from the favorites section by tapping and holding the cover.</p>
+			</section>
+			<ul class="ul-images">
+				<li class="li-grid-full"><img src="/images/work/shellac/shellac_interface.png" srcset="/images/work/shellac/shellac_interface@2x.png 2x, /images/work/shellac/shellac_interface.png 1x" alt="Shellac &ndash; Human Interface"></li>
+				<li><img src="/images/work/shellac/shellac_icon.png" srcset="/images/work/shellac/shellac_icon@2x.png 2x, /images/work/shellac/shellac_icon.png 1x" alt="Shellac &ndash; App Icon"></li>
+				<li><img src="/images/work/shellac/shellac_favorites.png" srcset="/images/work/shellac/shellac_favorites@2x.png 2x, /images/work/shellac/shellac_favorites.png 1x" alt="Album popover sheet in Shellac"></li>
+			</ul>
+		</article>
 	</main>
-	<section class="section-more">
-		<p>Test Shellac via
-			<a href="https://dribbble.com/JohJakob">TestFlight</a>!</p>
-	</section>
 	<footer>
 		<ul>
 			<li>
@@ -126,10 +124,14 @@
 			<a href="/privacy">Privacy Policy</a>
 		</p>
   </footer>
+  <script src="/js/gif.js"></script>
   <script>
     var figureShellacFavorites = document.getElementById("figure-shellac-favorites");
     var figcaptionShellacFavorites = figureShellacFavorites.getElementsByTagName("figcaption")[0];
+    var spanShellacFavorites = figcaptionShellacFavorites.getElementsByTagName("span")[0];
     var imgShellacFavorites = document.createElement("img");
+
+    spanShellacFavorites.onclick = function() { showStaticImage(imgShellacFavorites, spanShellacFavorites) };
 
     imgShellacFavorites.className = "img-gif img-iphone-4-inch";
     imgShellacFavorites.src = "/images/work/shellac/shellac_favorites_placeholder.png";
