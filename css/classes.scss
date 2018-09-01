@@ -61,6 +61,11 @@
 	}
 }
 
+.main-about article > img {
+	margin-bottom: 1em;
+	max-width: $size__default-image-max-width
+}
+
 .section-more {
 	padding: 0 $margin-padding__containers;
 	position: relative;
@@ -79,14 +84,6 @@
 		-moz-animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse;
 		-o-animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse;
 		animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse
-	}
-}
-
-.figure-float-right {
-	margin-bottom: 1em;
-	
-	img {
-		width: 100%
 	}
 }
 

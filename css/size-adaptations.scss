@@ -85,7 +85,7 @@
 
   .main-work a figcaption, .main-photos a figcaption {
     margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2
-  }
+	}
 
   .section-more {
     padding: 0 $margin-padding__containers / 2;
@@ -118,14 +118,6 @@
     }
   }
 
-  .figure-float-right {
-    margin: 0;
-    right: 0;
-    position: absolute;
-    width: auto;
-    max-width: 48%
-  }
-
   .figure-left {
     display: flex;
     align-items: flex-end;
@@ -155,6 +147,28 @@
 
 		.li-grid-full {
 			grid-column: 1 / 3
+		}
+	}
+}
+
+@media (min-width: 1366px) {
+	.main-about {
+		padding-right: 0;
+		
+		article {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+
+			& > img {
+				margin-left: 1em;
+				order: 2
+			}
+
+			section {
+				min-width: $size__text-max-width;
+				order: 1
+			}
 		}
 	}
 }
