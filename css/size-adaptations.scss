@@ -147,6 +147,10 @@
 			}
 		}
 
+		.ul-photos {
+			max-width: $size__photo-max-width - $size__grid-column-gap
+		}
+
 		.li-grid-full {
 			grid-column: 1 / 3
 		}

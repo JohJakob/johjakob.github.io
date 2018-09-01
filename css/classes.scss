@@ -50,14 +50,9 @@
 	}
 }
 
-.main-detail {
-	img {
-		margin-bottom: $margin-padding__inset * 2;
-		width: 100%;
-		max-width: 1000px;
-		height: auto;
-		display: block
-	}
+.main-photos-gallery img {
+	width: 100%;
+	max-width: $size__photo-max-width
 }
 
 .main-about article > img {
@@ -66,6 +61,7 @@
 }
 
 .section-more {
+	margin-top: 1em;
 	padding: 0 $margin-padding__containers;
 	position: relative;
 
@@ -111,7 +107,7 @@
 }
 
 .ul-images {
-	margin: 4em 0 0 0;
+	margin: 0;
 	
 	li {
 		margin-bottom: 1em;
