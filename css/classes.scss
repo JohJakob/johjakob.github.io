@@ -26,11 +26,12 @@
 		}
 
 		img {
-			width: 100%
+			width: 100%;
+			max-width: $size__default-image-max-width
 		}
 
 		figcaption {
-			margin: $margin-padding__inset $margin-padding__containers 0 $margin-padding__containers;
+			margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2;
 			font-weight: 500;
 
 			span {
@@ -115,7 +116,11 @@
 	margin: 0;
 	
 	li {
-		margin-bottom: 1em
+		margin-bottom: 1em;
+
+		&:last-child {
+			margin: 0
+		}
 	}
 }
 
