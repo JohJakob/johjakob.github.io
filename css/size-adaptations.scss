@@ -80,7 +80,7 @@
 	.main-work a {
     margin: 0 0 $margin-padding__inset * 3 0;
     width: 48%;
-    max-width: 600px; /* TODO */
+    max-width: $size__default-image-max-width
   }
 
   .main-work a figcaption, .main-photos a figcaption {
