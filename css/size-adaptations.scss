@@ -77,16 +77,18 @@
 	
 	// Classes
 
-	.main-work a {
-    margin: 0 0 $margin-padding__inset * 3 0;
-    width: 48%;
-    max-width: $size__default-image-max-width
-  }
+	.main-work, .main-photos {
+		a {
+    	margin: 0 0 $margin-padding__inset * 3 0;
+    	width: 48%;
+			max-width: $size__default-image-max-width
+		}
 
-  .main-work a figcaption, .main-photos a figcaption {
-    margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2
+		figcaption {
+			margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2
+		}
 	}
-
+	
   .section-more {
     padding: 0 $margin-padding__containers / 2;
     width: 75vw;

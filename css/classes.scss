@@ -17,6 +17,11 @@
 }
 
 .main-work, .main-photos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+
 	a {
 		margin: 0 auto $margin-padding__inset * 3 auto;
 		display: block;
@@ -43,13 +48,6 @@
 			}
 		}
 	}
-}
-
-.main-work {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center
 }
 
 .main-detail {
