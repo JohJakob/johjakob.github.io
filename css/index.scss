@@ -60,7 +60,7 @@ header {
 
 main {
 	margin: 0 auto;
-	padding: $margin-padding__containers 0 $margin-padding__inset;
+	padding: 1em 0 $margin-padding__inset;
 	position: relative;
 
 	article {
@@ -88,7 +88,6 @@ main {
 		}
 
 		figcaption {
-			margin: $margin-padding__inset $margin-padding__containers 0 $margin-padding__containers;
 			color: $color__gray;
 			font-size: .8em;
 			line-height: 1.2;

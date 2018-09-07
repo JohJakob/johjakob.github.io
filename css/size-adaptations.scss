@@ -81,11 +81,11 @@
 		a {
     	margin: 0 0 $margin-padding__inset * 3 0;
     	width: 48%;
-			max-width: $size__default-image-max-width
-		}
+			max-width: $size__default-image-max-width;
 
-		figcaption {
-			margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2
+			figcaption {
+				margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2
+			}
 		}
 	}
 	
@@ -100,10 +100,6 @@
 
     p {
       margin-left: $margin-padding__inset * 2
-    }
-
-    a {
-      font-weight: 500
     }
   }
 
@@ -176,6 +172,12 @@
 				order: 1
 			}
 		}
+	}
+}
+
+@media (min-width: 601px) {
+	.main-work a figcaption, .main-photos a figcaption {
+		margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2
 	}
 }
   

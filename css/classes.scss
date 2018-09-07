@@ -36,7 +36,7 @@
 		}
 
 		figcaption {
-			margin: $margin-padding__inset $margin-padding__inset * 2 0 $margin-padding__inset * 2;
+			margin: $margin-padding__inset $margin-padding__containers 0 $margin-padding__containers;
 			font-weight: 500;
 
 			span {
@@ -87,14 +87,24 @@
 		-o-animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse;
 		animation: arrow-animation 1s ease-in-out 0s infinite alternate-reverse
 	}
+
+	a {
+		font-weight: 500
+	}
 }
 
-.img-gif {
-	cursor: pointer
-}
+.p-hint {
+	margin-top: 1.2em;
+	color: lighten($color__black, 40%);
+	font-size: .8em;
 
-.img-iphone-4-inch {
-	max-width: 320px
+	a {
+		color: $color__gray;
+
+		&:hover {
+			color: $color__black
+		}
+	}
 }
 
 .main-photos a {
@@ -111,6 +121,29 @@
 
 .a-instagram:hover {
 	color: $color__instagram
+}
+
+.a-mail:after {
+	content: attr(data-name) "@" attr(data-domain) "." attr(data-tld)
+}
+
+.a-back {
+	margin: 0 $margin-padding__containers $margin-padding__inset * 2 $margin-padding__containers;
+	padding: $margin-padding__inset $margin-padding__inset $margin-padding__inset $margin-padding__inset * 2.5;
+	position: relative;
+	color: $color__gray;
+	font-size: .8em;
+	display: block;
+
+	&:before {
+		top: .025em;
+		left: 0;
+		position: absolute;
+		width: 17px;
+		height: 100%;
+		content: "";
+		background: url('/images/back_arrow.svg') center center no-repeat
+	}
 }
 
 .ul-images {
@@ -145,25 +178,6 @@
 	fill: $color__instagram
 }
 
-.a-back {
-	margin: 0 $margin-padding__containers $margin-padding__inset * 2 $margin-padding__containers;
-	padding: $margin-padding__inset $margin-padding__inset $margin-padding__inset $margin-padding__inset * 2.5;
-	position: relative;
-	color: $color__gray;
-	font-size: .8em;
-	display: block;
-
-	&:before {
-		top: .025em;
-		left: 0;
-		position: absolute;
-		width: 17px;
-		height: 100%;
-		content: "";
-		background: url('/images/back_arrow.svg') center center no-repeat
-	}
-}
-
 .ul-default {
 	margin-left: $margin-padding__inset * 6;
 	color: $color__gray;
@@ -186,24 +200,6 @@
 		background: $color__light-gray;
 		border-radius: $border-radius__small
 	}
-}
-
-.p-hint {
-	margin-top: 1.2em;
-	color: lighten($color__black, 40%);
-	font-size: .8em;
-
-	a {
-		color: $color__gray;
-
-		&:hover {
-			color: $color__black
-		}
-	}
-}
-
-.a-mail:after {
-	content: attr(data-name) "@" attr(data-domain) "." attr(data-tld)
 }
 
 .span-show-static {
