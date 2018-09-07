@@ -55,9 +55,16 @@
 	max-width: $size__photo-max-width
 }
 
-.main-about article > img {
-	margin-bottom: 1em;
-	max-width: $size__default-image-max-width
+.main-about article {
+	section {
+		margin-bottom: 0
+	}
+
+	& > img {
+		margin-bottom: 1em;
+		max-width: $size__default-image-max-width
+	
+	}
 }
 
 .section-more {
