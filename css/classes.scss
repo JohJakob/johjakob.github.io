@@ -180,8 +180,13 @@
 
 .ul-default {
 	margin-left: $margin-padding__inset * 6;
-	color: $color__gray;
-	list-style: inherit
+	list-style: inherit;
+
+	li {
+		margin-bottom: .2em;
+		color: $color__gray;
+		font-size: .8em
+	}
 }
 
 .ul-skills {
