@@ -156,14 +156,13 @@
 @media (min-width: 1366px) {
 	.main-about {
 		padding-right: 0;
+		overflow-x: hidden;
 		
 		article {
 			display: flex;
-			justify-content: space-between;
 			align-items: flex-start;
 
 			& > img {
-				margin-left: 1em;
 				order: 2
 			}
 
