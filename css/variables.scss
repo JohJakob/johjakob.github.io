@@ -31,13 +31,3 @@ $color__instagram: #e4405f;
 $color__500px: #0099e5;
 
 $border-radius__small: 6px;
-
-// Mixins
-
-@mixin three-stop-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color) {
-	background: -webkit-linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
-  background: -moz-linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
-  background: -ms-linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
-  background: -o-linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
-  background: linear-gradient($direction, $first-gradient-color, $second-gradient-color, $third-gradient-color);
-}
