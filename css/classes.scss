@@ -19,8 +19,7 @@
 .main-work, .main-photos {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 
 	a {
 		margin: 0 auto $margin-padding__inset * 3 auto;
@@ -62,8 +61,7 @@
 
 	& > img {
 		margin-bottom: 1em;
-		max-width: $size__default-image-max-width
-	
+		width: 100%
 	}
 }
 
