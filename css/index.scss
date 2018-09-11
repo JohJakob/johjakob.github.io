@@ -1,261 +1,154 @@
-/* Made with <3 in Germany */
+//
+// index.scss
+// johjakob.de
+//
+// © 2014-2018 Johannes Jakob
+// Made with <3 in Germany
+//
 
-/* Variables */
+@import "variables";
 
-$gray: #ccc;
-$dark-gray: #666;
-$white: #fff;
-$background: #1a1a1a;
-
-$dribbble-color: #ea4c89;
-$twitter-color: #55acee;
-$instagram-color: #e4405f;
-
-$font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Symbol";
-
-$tiny-text: 9pt;
-$small-text: 12pt;
-$text: 16pt;
-$large-text: 21pt;
-$huge-text: 37pt;
-
-$shadow: 0 5px 10px rgba(0, 0, 0, .2);
-$large-shadow: 0 20px 40px rgba(0, 0, 0, .2);
-
-/* Mixins */
-
-@mixin transition-set-up($property, $time, $easing) {
-	transition: $property $time $easing;
-	-webkit-transition: $property $time $easing;
-	-moz-transition: $property $time $easing;
-	-o-transition: $property $time $easing
-}
-
-@mixin gradient($firstGradientColor, $secondGradientColor) {
-  background: -webkit-linear-gradient(top, $firstGradientColor, $secondGradientColor);
-  background: -moz-linear-gradient(top, $firstGradientColor, $secondGradientColor);
-  background: -ms-linear-gradient(top, $firstGradientColor, $secondGradientColor);
-  background: -o-linear-gradient(top, $firstGradientColor, $secondGradientColor);
-  background: linear-gradient(top, $firstGradientColor, $secondGradientColor)
-}
-
-/* General */
+// Base
 
 * {
-  margin: 0;
-  padding: 0;
-  color: $gray;
-  font-family: $font;
-  font-size: $text;
-  text-decoration: none;
-  outline: none;
-  -webkit-tap-highlight-color: transparent
+	margin: 0;
+	padding: 0;
+	color: $color__black;
+	letter-spacing: .01em;
+	text-decoration: none;
+	box-sizing: border-box;
+	outline: none
 }
 
 body {
-  padding: 5%;
-  text-align: center;
-  background: $background
+	background: $color__white;
+	font-size: 16pt;
+	font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 header {
-  margin-bottom: 40px;
+	padding: $margin-padding__containers $margin-padding__containers 0 $margin-padding__containers;
+	width: 100%;
 
-  li {
-    margin: 0 2%;
-    font-weight: 200
-  }
+	h1 {
+		font-size: 1em;
+		font-weight: 700;
 
-  svg {
-    margin: 40px 10px 0 10px
-  }
-}
+		a {
+			letter-spacing: .2em;
+			text-transform: uppercase
+		}
+	}
 
-h1 {
-  margin-bottom: 40px;
-  color: $white;
-  font-size: $large-text;
-  font-weight: 600;
-  letter-spacing: .02em;
-  cursor: default;
+	ul {
+		margin: 1em 0;
+		font-size: .8em;
+		display: flex;
+		justify-content: space-between;
 
-  span, a {
-    font-size: $large-text;
-    font-weight: 100
-  }
-}
+		li a {
+			color: $color__gray;
 
-ul {
-  list-style: none
-}
-
-li {
-  display: inline-block
-}
-
-a:hover {
-  color: $white
+			&:hover {
+				background: none
+			}
+		}
+	}
 }
 
 main {
-  ul p {
-    margin-bottom: 20px;
-    color: $dark-gray;
-    font-size: $small-text;
-    font-weight: 100;
-    font-style: italic;
-    cursor: default
-  }
+	margin: 0 auto;
+	padding: 1em 0 $margin-padding__inset;
+	position: relative;
 
-  li {
-    margin: 0 2%
-  }
+	article {
+		section {
+			margin-bottom: 4em;
+			max-width: $size__text-max-width
+		}
 
-  img {
-    margin-bottom: 20px
-  }
+		h1, h2, h3, p, ul {
+			margin: 0 $margin-padding__containers .5em $margin-padding__containers
+		}
 
-  h2 {
-    margin-bottom: 10px;
-    font-weight: 400;
-    cursor: default
-  }
+		img {
+			width: 100%
+		}
+
+		figure {
+			margin-bottom: 1em;
+
+			img {
+				margin: 0 auto;
+				max-width: $size__default-image-max-width;
+				display: block
+			}
+		}
+
+		figcaption {
+			color: $color__gray;
+			font-size: .8em;
+			line-height: 1.2;
+			font-style: italic
+		}
+	}
+
+	h1 {
+		margin-top: -.2em;
+		font-size: 1.2em;
+	}
+
+	h2 {
+		font-size: 1em;
+		font-weight: 500;
+	}
+
+	h3 {
+		color: lighten($color__black, 10%);
+		font-size: 1em;
+		font-weight: 500
+	}
+
+	p {
+		color: $color__gray;
+		font-size: .8em;
+		line-height: 1.5;
+
+		a {
+			font-weight: 500
+		}
+	}
 }
 
 footer {
-  svg {
-    margin: 20px 10px
-  }
+	padding: 2em $margin-padding__containers $margin-padding__containers $margin-padding__containers;
+	width: 100%;
 
-  p {
-    color: $dark-gray;
-    font-size: $small-text;
-    cursor: default;
+	ul {
+		margin-bottom: $margin-padding__inset * 2;
+		display: flex;
+		justify-content: space-between
+	}
 
-    a {
-      color: $dark-gray;
-      font-size: $small-text;
+	p {
+		color: $color__gray;
+		font-size: .8em;
+		line-height: 1.2;
 
-      &:hover {
-        color: $gray
-      }
-    }
-  }
-}
+		a {
+			color: $color__gray;
 
-::selection {
-  color: $background;
-  background: $white
-}
-
-::-moz-selection {
-  color: $background;
-  background: $white
-}
-
-/* Classes */
-
-.current {
-  color: $white;
-  font-weight: 600;
-  cursor: default;
-
-  a {
-    color: $white
-  }
-}
-
-.work {
-  img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: $shadow;
-    @include transition-set-up(box-shadow, .2s, ease);
-
-		&:hover {
-			box-shadow: $large-shadow
+			&:hover {
+				color: $color__black
+			}
 		}
-  }
+	}
 }
 
-.apps {
-  img {
-    margin-top: 20px;
-    width: 120px
-  }
+ul {
+	list-style: none
 }
 
-.about {
-  margin: 0 auto 40px auto;
-  max-width: 800px;
-  text-align: left;
-
-  h2 {
-    color: $white;
-    font-size: $large-text
-  }
-
-  p {
-    margin: 20px 0;
-    font-weight: 200;
-    line-height: 1.7;
-    letter-spacing: .05em;
-
-    a {
-      font-weight: 600
-    }
-  }
-}
-
-.dribbble:hover {
-  path {
-    fill: $dribbble-color
-  }
-}
-
-.github:hover {
-  path {
-    fill: $white
-  }
-}
-
-.codepen:hover {
-  path {
-    fill: $white
-  }
-}
-
-.twitter:hover {
-  path {
-    fill: $twitter-color
-  }
-}
-
-.instagram:hover {
-  path {
-    fill: #e4405f
-  }
-}
-
-.imprint {
-  margin: 0 auto;
-  max-width: 800px;
-  text-align: left;
-
-  h1 {
-    margin-bottom: 20px;
-    color: $white;
-    font-size: $huge-text
-  }
-
-  h2 {
-    color: $white;
-    font-size: $large-text
-  }
-
-  p {
-    margin: 20px 0;
-    line-height: 1.5
-  }
-}
+@import "classes";
+@import "size-adaptations";
+@import "keyframes";

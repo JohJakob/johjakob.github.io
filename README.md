@@ -1,5 +1,3 @@
-<!-- twitter: @JohJakob -->
-
 # johjakob.github.io
 
-_This is my personal website. Check it out: [johjakob.de](http://www.johjakob.de)._
+_Personal website of Johannes Jakob: [johjakob.de](https://johjakob.de)_
